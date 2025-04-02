@@ -115,9 +115,9 @@ public class ReclamationService {
                             .build()
             );
 
-            emailSenderService.sendEmail(reclamation.getUser().getEmail() , "Reclamation status", "Reclamation with ID :"+ reclamation.getId() +
-                    " created at the date :" + LocalDateTime.now() +
-                    " reclamation status changed to  :" + reclamation.getStatus());
+//            emailSenderService.sendEmail(reclamation.getUser().getEmail() , "Reclamation status", "Reclamation with ID :"+ reclamation.getId() +
+//                    " created at the date :" + LocalDateTime.now() +
+//                    " reclamation status changed to  :" + reclamation.getStatus());
             return ResponseEntity.ok("Status changed Successfully");
         }else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Reclamation Not Found");
